@@ -1,1 +1,6 @@
 .env
+*.bak
+
+# Database
+*.sqlite3
+virtual/
