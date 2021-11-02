@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            display: block;
+            background-color: #04AA6D!important;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #04AA6D;
+        }
+        
+        .sectionc:hover {
+            transform: scale(0.9) !important;
+            transition: transform 3s;
+        }
+        
+        .t {
+            height: 100vh !important;
+        }
+        
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 10px;
+            }
+            .t {
+                height: max-content !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(3, 3, 29)">
+    <ul style="float:right; overflow:hidden;">
+
+        <li>
+            <a href="{% url 'picture_image' %}#skills" class=''>Skills</a>
+        </li>
+        <li>
+            <a href="{% url 'picture_image' %}#projects" class=''>Projects</a>
+        </li>
+        <li>
+            <a href="{% url 'picture_image' %}#education" class=''>Education</a>
+        </li>
+        <li><a href="{% url 'picture_image' %}#contacts" class=''>Contact</a></li>
+        <li>
+            <a class="active " href="#about ">Home</a>
+
+        </li>
+    </ul>
+
+    <img src="/static/result.png " alt=' no ' width='100%' height='100% ' alt=" ">
+    <div class="t" id='skills'>
+        <div class="card sectionc " style='background-color: transparent !important;'>
+            <div class="card-header " style='font-size:xx-large;font-weight: bolder; background-color: white'>
+                SKILLS
+            </div>
+            <div class="card-body " style='border-bottom: 0px;'>
+                {%include 'skills.html'%}
+
+            </div>
+        </div>
+    </div>
+    <div class="card sectionc " id='projects' style='background-color: transparent !important;'>
+        <div class="card-header " style='font-size:xx-large;font-weight: bolder;background-color: white '>
+            PROJECTS
+        </div>
+        <div class="card-body " style='border-bottom: none; '>
+
+            {%include 'projects.html'%}
+
+        </div>
+    </div>
+    <div class="t" id='experience'>
+        <div class="card sectionc " style='background-color: transparent !important; '>
+            <div class="card-header " style='background-color: white !important;font-size:xx-large;font-weight: bolder; '>
+                EXPERIENCE
+            </div>
+            <div class="card-body " style='background-color: transparent !important; '>
+                {%include 'experience.html'%}
+            </div>
+        </div>
+    </div>
+    <div class="t" id='education'>
+        <div class="card sectionc " style='background-color: transparent !important; '>
+            <div class="card-header " style='background-color: white !important;font-size:xx-large;font-weight: bolder; '>
+                EDUCATION
+            </div>
+            <div class="card-body text-center " style='background-color: transparent !important; '>
+                {%include 'education.html'%}
+            </div>
+        </div>
+    </div>
+    <div class="t" id='contacts'>
+        <div class="card sectionc d-block " style='background-color: transparent !important; '>
+            <div class="card-header " style='background-color: white !important;font-size:xx-large;font-weight: bolder; '>
+                CONTACTS
+            </div>
+
+            <div class="card-body " style="background-color: transparent !important; ">
+                {%include 'contacts.html'%}
+
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+
+
+        </br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
